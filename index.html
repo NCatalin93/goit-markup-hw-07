@@ -19,6 +19,36 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+    <div class="js-menu-container">
+      <button class="menu-toggle js-close-menu">
+        <svg>
+          <use href="./images/icons.svg#icon-menu-close-button"></use>
+        </svg>
+      </button>
+      <nav class="menu-drawer-navigation">
+        <ul>
+          <li>
+            <a class="after-link" href="./index.html" id="current">Studio</a>
+          </li>
+          <li><a href="./portfolio.html">Portfolio</a></li>
+          <li><a href="">Contacts</a></li>
+        </ul>
+        <div>
+          <a class="contact-adress e-mail" href="mailto:info@devstudio.com">
+            <span>info@devstudio.com</span>
+          </a>
+          <a class="contact-adress telephone" href="=tel:+12127724150">
+            <span>+1 212-772-4150</span>
+          </a>
+        </div>
+        <div>
+          <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+          <a href="https://www.twitter.com/" target="_blank">Twitter</a>
+          <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+          <a href="https://www.linkedin.com/" target="_blank">Linkedin</a>
+        </div>
+      </nav>
+    </div>
     <!-- Header -->
     <header class="global-header">
       <div class="container">
@@ -50,7 +80,7 @@
             <span>+1 212-772-4150</span>
           </a>
         </div>
-        <div class="nav-container-mobile">
+        <div class="menu-button js-open-menu">
           <svg>
             <use href="./images/icons.svg#icon-menu"></use>
           </svg>
@@ -509,6 +539,13 @@
         </form>
       </div>
     </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

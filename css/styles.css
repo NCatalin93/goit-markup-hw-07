@@ -96,9 +96,15 @@ img {
 
 /* Mobile nav */
 
-.nav-container-mobile svg {
+.menu-button svg {
   width: 40px;
   height: 40px;
+  transition: fill var(--transition);
+  cursor: pointer;
+}
+
+.menu-button svg:hover {
+  fill: var(--highlighting-color);
 }
 
 .container-nav,
@@ -934,6 +940,45 @@ textarea:hover {
   visibility: hidden;
 }
 
+.js-menu-container {
+  display: none;
+}
+
+.js-menu-container.is-open {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background-color: var(--white-color);
+  width: 480px;
+  height: 100%;
+  padding: 48px 40px;
+  z-index: 2;
+}
+
+.js-menu-container .js-close-menu {
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: absolute;
+  top: 25px;
+  right: 40px;
+}
+
+.js-menu-container .js-close-menu svg {
+  width: 20px;
+  height: 20px;
+  transition: fill var(--transition);
+}
+
+.js-menu-container .js-close-menu svg:hover {
+  fill: var(--highlighting-color);
+}
+
+.menu-drawer-navigation {
+  display: flex;
+  flex-direction: column;
+}
+
 @media screen and (min-width: 480px) {
   .container {
     width: 428px;
@@ -945,7 +990,7 @@ textarea:hover {
   .container {
     width: 768px;
   }
-  .nav-container-mobile {
+  .menu-button {
     display: none;
   }
 
@@ -1062,7 +1107,7 @@ textarea:hover {
   .container {
     width: 1200px;
   }
-  .nav-container-mobile {
+  .menu-button {
     display: none;
   }
 
