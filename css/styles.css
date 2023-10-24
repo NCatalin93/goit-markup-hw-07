@@ -112,50 +112,6 @@ img {
   display: none;
 }
 
-/* Activities sub-section */
-
-.activities .section {
-  padding-bottom: 94px;
-}
-
-.activities .section ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-top: 50px;
-  gap: 30px;
-}
-
-.activities .section ul li {
-  display: flex;
-  flex-grow: 1;
-  position: relative;
-}
-
-.activities .section ul li img {
-  flex-grow: 1;
-}
-
-.activities h2 {
-  font-size: 36px;
-  line-height: 1.17194;
-  text-align: center;
-  font-weight: var(--titles-font-weight);
-  padding: 0 501px;
-}
-
-.activities .label {
-  position: absolute;
-  width: 100%;
-  font-size: var(--titles-font-weight);
-  text-align: center;
-  line-height: var(--common-line-height);
-  color: var(--white-color);
-  background-color: rgba(47, 48, 58, 0.8);
-  padding: 27px 0;
-  bottom: 0%;
-}
-
 /* Team members sub-section */
 .team-members {
   background-color: var(--fill-second-color);
@@ -1023,6 +979,12 @@ textarea:hover {
     color: var(--backup-text-color);
     letter-spacing: 0.03em;
   }
+
+  /* Activities sub-section */
+
+  .activities {
+    display: none;
+  }
 }
 
 /* Tablet TODO: */
@@ -1264,5 +1226,50 @@ textarea:hover {
   .values .section li {
     width: 270px;
     flex-grow: 1;
+  }
+
+  /* Activities section */
+
+  .activities {
+    display: contents;
+  }
+
+  .activities .section ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 50px;
+    gap: 30px;
+  }
+
+  .activities .section ul li {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+  }
+
+  .activities .section ul li img {
+    flex-grow: 1;
+  }
+
+  .activities h2 {
+    font-size: 36px;
+    line-height: 1.17194;
+    text-align: center;
+    font-weight: var(--titles-font-weight);
+    padding: 0 485px;
+    letter-spacing: 0.03em;
+  }
+
+  .activities .label {
+    position: absolute;
+    width: 100%;
+    font-size: var(--titles-font-weight);
+    text-align: center;
+    line-height: var(--common-line-height);
+    color: var(--white-color);
+    background-color: rgba(47, 48, 58, 0.8);
+    padding: 27px 0;
+    bottom: 0%;
   }
 }
