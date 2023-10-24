@@ -120,7 +120,7 @@ img {
       rgba(47, 48, 58, 0.1),
       var(--fill-color)
     ),
-    url("../images/bg-image.jpg");
+    url("../images/bg-image-m.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -940,6 +940,8 @@ textarea:hover {
   visibility: hidden;
 }
 
+/* Menu modal */
+
 .js-menu-container {
   display: none;
 }
@@ -953,6 +955,19 @@ textarea:hover {
   height: 100%;
   padding: 48px 40px;
   z-index: 2;
+}
+
+.js-menu-container.is-open a {
+  text-decoration: none;
+  font-weight: 500;
+  line-height: var(--common-line-height);
+  color: var(--backup-text-color);
+}
+
+.menu-drawer-navigation a:hover,
+.menu-drawer-navigation a:focus {
+  color: var(--highlighting-color);
+  fill: var(--highlighting-color);
 }
 
 .js-menu-container .js-close-menu {
@@ -982,6 +997,22 @@ textarea:hover {
 @media screen and (min-width: 480px) {
   .container {
     width: 428px;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .main-head {
+      background-image: linear-gradient(
+          to top,
+          rgba(47, 48, 58, 0.1),
+          var(--fill-color)
+        ),
+        url("../images/bg-image-m-x2.jpeg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
   }
 }
 
@@ -1100,6 +1131,33 @@ textarea:hover {
     line-height: var(--common-line-height);
     color: var(--backup-text-color);
   }
+
+  .main-head {
+    background-image: linear-gradient(
+        to top,
+        rgba(47, 48, 58, 0.1),
+        var(--fill-color)
+      ),
+      url("../images/bg-image-t.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .main-head {
+      background-image: linear-gradient(
+          to top,
+          rgba(47, 48, 58, 0.1),
+          var(--fill-color)
+        ),
+        url("../images/bg-image-t-x2.jpeg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 /* Desktop TODO:*/
@@ -1120,5 +1178,32 @@ textarea:hover {
 
   .container-contact a {
     justify-content: space-between;
+  }
+
+  .main-head {
+    background-image: linear-gradient(
+        to top,
+        rgba(47, 48, 58, 0.1),
+        var(--fill-color)
+      ),
+      url("../images/bg-image-d.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .main-head {
+      background-image: linear-gradient(
+          to top,
+          rgba(47, 48, 58, 0.1),
+          var(--fill-color)
+        ),
+        url("../images/bg-image-d-x2.jpeg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
   }
 }
