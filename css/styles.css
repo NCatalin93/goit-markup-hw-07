@@ -541,7 +541,7 @@ textarea:hover {
   flex-direction: column;
   position: fixed;
   background-color: var(--white-color);
-  width: 480px;
+  width: 100%;
   height: 100%;
   padding: 48px 40px;
   z-index: 2;
@@ -550,14 +550,6 @@ textarea:hover {
 .js-menu-container.is-open a {
   text-decoration: none;
   font-weight: 500;
-  line-height: var(--common-line-height);
-  color: var(--backup-text-color);
-}
-
-.menu-drawer-navigation a:hover,
-.menu-drawer-navigation a:focus {
-  color: var(--highlighting-color);
-  fill: var(--highlighting-color);
 }
 
 .js-menu-container .js-close-menu {
@@ -566,7 +558,7 @@ textarea:hover {
   cursor: pointer;
   position: absolute;
   top: 25px;
-  right: 40px;
+  right: 15px;
 }
 
 .js-menu-container .js-close-menu svg {
@@ -582,6 +574,61 @@ textarea:hover {
 .menu-drawer-navigation {
   display: flex;
   flex-direction: column;
+  letter-spacing: 0.02em;
+}
+
+.menu-drawer-navigation .mobile-navigation {
+  font-size: 40px;
+  line-height: 1.172;
+  margin-bottom: 306px;
+}
+
+.menu-drawer-navigation .mobile-navigation a {
+  color: var(--brand-text-color);
+}
+
+.menu-drawer-navigation .mobile-navigation a:hover,
+.menu-drawer-navigation .mobile-navigation a:focus {
+  color: var(--highlighting-color);
+}
+
+.menu-drawer-navigation .mobile-contact-address {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+.menu-drawer-navigation .mobile-contact-address a {
+  color: var(--backup-text-color);
+}
+
+.menu-drawer-navigation .mobile-contact-address a:hover,
+.menu-drawer-navigation .mobile-contact-address a:hover {
+  color: var(--highlighting-color);
+}
+
+.menu-drawer-navigation .telephone {
+  font-size: 34px;
+  line-height: 1.17176;
+}
+
+.menu-drawer-navigation .e-mail {
+  font-size: 24px;
+  line-height: 1.17208;
+}
+
+.mobile-social-media {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  font-size: 18px;
+  line-height: 1.22222;
+}
+
+.mobile-social-media a {
+  color: var(--highlighting-color);
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 /* Mobile TODO: */
@@ -1056,7 +1103,7 @@ textarea:hover {
     border-radius: 2px;
     background-color: var(--highlighting-color);
     left: 0;
-    bottom: -21px;
+    bottom: -19px;
     content: "";
   }
 
