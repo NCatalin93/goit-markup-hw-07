@@ -112,72 +112,6 @@ img {
   display: none;
 }
 
-/* Values sub-section */
-
-.values .section,
-.activities .section,
-.team-members .section,
-.customers .section {
-  padding-top: 94px;
-}
-
-.section {
-  max-width: 1200px 100vw;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.values .section ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-.values .section li {
-  width: 270px;
-  flex-grow: 1;
-}
-
-.values .section li div {
-  display: grid;
-  place-items: center;
-  padding: 25px 100px;
-  background-color: var(--fill-second-color);
-  border-radius: 4px;
-  margin-bottom: 30px;
-}
-
-.values .section li .icon {
-  width: 70px;
-  height: 70px;
-  background-color: var(--fill-second-color);
-}
-
-.values h3 {
-  font-weight: var(--titles-font-weight);
-  line-height: var(--common-line-height);
-  padding-bottom: 10px;
-}
-
-.values p {
-  line-height: 1.71429;
-  color: var(--backup-text-color);
-}
 /* Activities sub-section */
 
 .activities .section {
@@ -953,6 +887,7 @@ textarea:hover {
     width: 480px;
   }
 
+  /* Main-head section */
   .main-head {
     background-image: linear-gradient(
         to top,
@@ -1015,6 +950,78 @@ textarea:hover {
   .request-button:hover {
     color: var(--white-color);
     background-color: #188ce8;
+  }
+
+  /* Values sub-section */
+
+  .values .section,
+  .activities .section,
+  .team-members .section,
+  .customers .section {
+    padding-top: 60px;
+  }
+
+  .section {
+    max-width: 1200px 100vw;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  .values .section ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .values .section li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .values .section li div {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    padding: 25px 100px;
+    background-color: var(--fill-second-color);
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+
+  .values .section li .icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--fill-second-color);
+  }
+
+  .values h3 {
+    font-weight: var(--titles-font-weight);
+    line-height: var(--common-line-height);
+    padding-bottom: 10px;
+    letter-spacing: 0.03em;
+  }
+
+  .values p {
+    line-height: 1.71429;
+    color: var(--backup-text-color);
+    letter-spacing: 0.03em;
   }
 }
 
@@ -1134,6 +1141,7 @@ textarea:hover {
     color: var(--backup-text-color);
   }
 
+  /* Main-head section */
   .main-head {
     background-image: linear-gradient(
         to top,
@@ -1161,8 +1169,20 @@ textarea:hover {
     }
   }
 
+  /* Main-head section */
+
   .main-head .section {
     padding: 118px 204px;
+  }
+
+  /* Values sub-section */
+
+  .values .section ul {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row: auto auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
   }
 }
 
@@ -1185,6 +1205,8 @@ textarea:hover {
   .container-contact a {
     justify-content: space-between;
   }
+
+  /* Main-head section */
 
   .main-head {
     background-image: linear-gradient(
@@ -1221,5 +1243,26 @@ textarea:hover {
     max-width: 700px;
     font-size: 44px;
     line-height: 1.36363;
+  }
+
+  /* Values sub-section */
+
+  .values .section,
+  .activities .section,
+  .team-members .section,
+  .customers .section {
+    padding-top: 94px;
+  }
+
+  .values .section ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .values .section li {
+    width: 270px;
+    flex-grow: 1;
   }
 }
