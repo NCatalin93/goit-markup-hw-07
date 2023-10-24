@@ -198,48 +198,6 @@ img {
   text-align: center;
 }
 
-/* Customers section */
-.customers {
-  padding-bottom: 94px;
-}
-
-.customers h2 {
-  font-size: 36px;
-  line-height: 1.17194;
-  text-align: center;
-  font-weight: var(--titles-font-weight);
-  margin-bottom: 50px;
-}
-
-.customers-cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-.customers-cards a {
-  display: flex;
-  flex-grow: 1;
-  padding: 16px 32px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  fill: #afb1b8;
-  transition: border var(--transition), fill var(--transition);
-}
-
-.customers .icon {
-  flex-grow: 1;
-  width: 106px;
-  height: 60px;
-}
-
-.customers .item:hover,
-.customers .item:focus {
-  border: 1px solid var(--highlighting-color);
-  fill: var(--highlighting-color);
-}
-
 /* Footer section */
 
 .global-footer .container {
@@ -982,9 +940,53 @@ textarea:hover {
 
   /* Activities sub-section */
 
-  .activities {
+  .activities .section {
     display: none;
   }
+}
+
+/* Customers section */
+.customers {
+  padding-bottom: 60px;
+}
+
+.customers h2 {
+  font-size: 28px;
+  line-height: 1.14928;
+  text-align: center;
+  font-weight: var(--titles-font-weight);
+  margin-bottom: 50px;
+  letter-spacing: 0.03em;
+}
+
+.customers-cards {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-row: auto auto;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+
+.customers-cards a {
+  display: flex;
+  flex-grow: 1;
+  padding: 16px 32px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: #afb1b8;
+  transition: border var(--transition), fill var(--transition);
+}
+
+.customers .icon {
+  flex-grow: 1;
+  width: 106px;
+  height: 60px;
+}
+
+.customers .item:hover,
+.customers .item:focus {
+  border: 1px solid var(--highlighting-color);
+  fill: var(--highlighting-color);
 }
 
 /* Tablet TODO: */
@@ -1146,6 +1148,16 @@ textarea:hover {
     grid-column-gap: 30px;
     grid-row-gap: 30px;
   }
+
+  /* Customers section */
+
+  .customers-cards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row: auto auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
 }
 
 /* Desktop TODO:*/
@@ -1214,6 +1226,7 @@ textarea:hover {
   .team-members .section,
   .customers .section {
     padding-top: 94px;
+    padding-bottom: 94px;
   }
 
   .values .section ul {
@@ -1230,7 +1243,7 @@ textarea:hover {
 
   /* Activities section */
 
-  .activities {
+  .activities .section {
     display: contents;
   }
 
@@ -1271,5 +1284,23 @@ textarea:hover {
     background-color: rgba(47, 48, 58, 0.8);
     padding: 27px 0;
     bottom: 0%;
+  }
+
+  /* Customers section */
+  .customers {
+    padding-bottom: 94px;
+  }
+
+  .customers h2 {
+    font-size: 36px;
+    line-height: 1.17194;
+    margin-bottom: 50px;
+  }
+
+  .customers-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
   }
 }
