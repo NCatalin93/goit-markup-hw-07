@@ -847,9 +847,15 @@ textarea:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 30px;
+    gap: 60px;
     padding-top: 60px;
     padding-bottom: 60px;
+    align-items: center;
+  }
+
+  .global-footer-address {
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
 
@@ -859,6 +865,7 @@ textarea:hover {
     align-content: space-between;
     gap: 12px;
     width: 207px;
+    align-items: center;
   }
 
   .global-footer .container .footer-social-links {
@@ -869,6 +876,7 @@ textarea:hover {
     gap: 20px;
     width: 206px;
     height: 80px;
+    align-items: center;
   }
 
   .global-footer .container .footer-social-links h3 {
@@ -881,6 +889,7 @@ textarea:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 10px;
   }
 
   .global-footer .container .footer-social-links .icon {
@@ -906,7 +915,6 @@ textarea:hover {
 
   .global-footer-address a {
     text-decoration: none;
-    width: 231px;
   }
 
   .global-footer {
@@ -954,11 +962,11 @@ textarea:hover {
   /* Form styles */
 
   .global-footer-form {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
-    padding: 0 15px;
   }
 
   .global-footer-form .form-label {
@@ -970,8 +978,10 @@ textarea:hover {
 
   .global-footer-form .footer-input-container {
     display: flex;
-    flex-direction: row;
-    gap: 12px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
   }
 
   .global-footer-form .textfield,
@@ -981,7 +991,7 @@ textarea:hover {
   }
 
   .global-footer-form .textfield {
-    max-width: 65%;
+    width: 100%;
     border: 1px solid rgba(255, 255, 255, 0.3);
     outline: none;
     padding: 15px 16px;
@@ -1016,7 +1026,7 @@ textarea:hover {
 
   .form-submit {
     display: flex;
-    width: 35%;
+    width: 200px;
     background-color: var(--highlighting-color);
     position: relative;
     cursor: pointer;
@@ -1240,6 +1250,17 @@ textarea:hover {
   .global-footer .container {
     flex-direction: row;
   }
+
+  .global-footer-form {
+    width: 50%;
+    padding: 0 15px;
+  }
+  .global-footer-form .footer-input-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
 }
 
 /* Desktop TODO:*/
@@ -1416,5 +1437,31 @@ textarea:hover {
 
   .global-footer .container {
     flex-direction: row;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  .global-footer-address {
+    display: block;
+  }
+
+  .global-footer-address a {
+    width: 231px;
+  }
+
+  .global-footer .container .full-address {
+    align-items: flex-start;
+  }
+
+  .global-footer .container .footer-social-links {
+    align-items: flex-start;
+  }
+
+  .global-footer-form {
+    align-items: stretch;
+  }
+
+  .global-footer-form .textfield {
+    width: 65%;
   }
 }
