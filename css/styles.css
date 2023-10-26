@@ -55,8 +55,8 @@ img {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .global-header {
@@ -455,8 +455,8 @@ textarea:hover {
   flex-direction: column;
   position: fixed;
   background-color: var(--white-color);
-  width: 100%;
-  height: 100%;
+  max-width: 100vw;
+  height: 100vh;
   padding: 48px 40px;
   z-index: 2;
 }
@@ -471,8 +471,8 @@ textarea:hover {
   background: none;
   cursor: pointer;
   position: absolute;
-  top: 25px;
-  right: 15px;
+  top: 18px;
+  right: 18px;
 }
 
 .js-menu-container .js-close-menu svg {
@@ -492,9 +492,12 @@ textarea:hover {
 }
 
 .menu-drawer-navigation .mobile-navigation {
+  display: flex;
+  flex-direction: column;
   font-size: 40px;
   line-height: 1.172;
   margin-bottom: 306px;
+  gap: 32px;
 }
 
 .menu-drawer-navigation .mobile-navigation a {
@@ -535,13 +538,17 @@ textarea:hover {
 .mobile-social-media {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 10px;
   font-size: 18px;
   line-height: 1.22222;
 }
 
 .mobile-social-media a {
+  padding-right: 10px;
   color: var(--highlighting-color);
+}
+
+.mobile-social-media a:not(:last-child) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
@@ -549,6 +556,12 @@ textarea:hover {
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
+  }
+
+  /* Menu modal */
+
+  .js-menu-container.is-open {
+    width: 100vw;
   }
 
   /* Main-head section */
@@ -715,6 +728,7 @@ textarea:hover {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    background-color: var(--white-color);
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
@@ -734,9 +748,9 @@ textarea:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0px 32px 30px 32px;
-    background-color: var(--white-color);
+    margin: 0px auto 30px auto;
     fill: #afb1b8;
+    gap: 10px;
   }
 
   .team-members .section .social-media .icon {
@@ -839,7 +853,7 @@ textarea:hover {
     align-items: center;
   }
 
-  .global-footer .container .full-adress {
+  .global-footer .container .full-address {
     display: flex;
     flex-direction: column;
     align-content: space-between;
@@ -890,7 +904,7 @@ textarea:hover {
     border-radius: 50%;
   }
 
-  .global-footer-adress a {
+  .global-footer-address a {
     text-decoration: none;
     width: 231px;
   }
@@ -919,21 +933,21 @@ textarea:hover {
   .global-footer .logo:focus {
     color: var(--highlighting-color);
   }
-  /* Full adress sub-section */
-  .global-footer .full-adress {
+  /* Full address sub-section */
+  .global-footer .full-address {
     line-height: var(--common-line-height);
     color: var(--white-color);
     padding-top: 28px;
   }
 
-  .global-footer .full-adress a {
+  .global-footer .full-address a {
     line-height: 1.14286;
     color: rgba(100%, 100%, 100%, 60%);
     transition: color var(--transition);
   }
 
-  .global-footer .full-adress a:hover,
-  .global-footer .full-adress a:focus {
+  .global-footer .full-address a:hover,
+  .global-footer .full-address a:focus {
     color: var(--highlighting-color);
   }
 
@@ -1044,8 +1058,8 @@ textarea:hover {
   }
 
   .global-header .container {
-    padding-top: 24px;
-    padding-bottom: 25px;
+    padding-top: 18px;
+    padding-bottom: 19px;
   }
 
   /* Sub-section navigation */
@@ -1064,7 +1078,7 @@ textarea:hover {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 13px;
+    padding-left: 93px;
     gap: 50px;
   }
 
@@ -1106,11 +1120,11 @@ textarea:hover {
     border-radius: 2px;
     background-color: var(--highlighting-color);
     left: 0;
-    bottom: -26px;
+    bottom: -20px;
     content: "";
   }
 
-  /* Sub-section adress */
+  /* Sub-section address */
   .container-contact {
     display: flex;
     flex-direction: column;
@@ -1144,7 +1158,7 @@ textarea:hover {
     fill: var(--highlighting-color);
   }
 
-  .contact-adress {
+  .contact-address {
     font-weight: 500;
     line-height: var(--common-line-height);
     color: var(--backup-text-color);
@@ -1210,6 +1224,10 @@ textarea:hover {
 
   /* Customers section */
 
+  .customers h2 {
+    margin-bottom: 30px;
+  }
+
   .customers-cards {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -1233,6 +1251,11 @@ textarea:hover {
     display: none;
   }
 
+  .global-header .container {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+
   .container-contact {
     display: flex;
     flex-direction: row;
@@ -1245,7 +1268,7 @@ textarea:hover {
   }
 
   .after-link::after {
-    bottom: -20px;
+    bottom: -19px;
   }
 
   /* Main-head section */
