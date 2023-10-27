@@ -503,6 +503,7 @@ textarea:hover {
 
 .menu-drawer-navigation .mobile-navigation a {
   color: var(--brand-text-color);
+  transition: color var(--transition);
 }
 
 .menu-drawer-navigation .mobile-navigation a:hover,
@@ -519,6 +520,7 @@ textarea:hover {
 
 .menu-drawer-navigation .mobile-contact-address a {
   color: var(--backup-text-color);
+  transition: color var(--transition);
 }
 
 .menu-drawer-navigation .mobile-contact-address a:hover,
@@ -970,6 +972,12 @@ textarea:hover {
     gap: 20px;
   }
 
+  .footer-anchors {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
   .global-footer-form .form-label {
     text-transform: uppercase;
     font-weight: var(--titles-font-weight);
@@ -1250,18 +1258,31 @@ textarea:hover {
 
   /* Footer section */
   .global-footer .container {
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .global-footer-form {
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     padding: 0 15px;
   }
   .global-footer-form .footer-input-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     gap: 12px;
+  }
+  .global-footer-form .textfield {
+    width: 60%;
+  }
+
+  .footer-anchors {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 60px;
   }
 }
 
@@ -1476,7 +1497,12 @@ textarea:hover {
   }
 
   .global-footer-form {
+    flex-direction: column;
     align-items: stretch;
+  }
+
+  .global-footer-form .footer-input-container {
+    flex-direction: row;
   }
 
   .global-footer-form .textfield {
